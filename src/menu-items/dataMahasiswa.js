@@ -19,21 +19,21 @@ const DataMahasiswa = {
       id: 'reguler',
       title: 'Jalur Reguler',
       type: 'collapse',
-      url: '/dashboard/reguler',
+      url: '/calon-mahasiswa/reguler',
       icon: icons.IconSchool,
       children: [
         {
           id: 's1',
           title: 'S1',
           type: 'item',
-          url: '/dashboard/reguler/s1',
+          url: '/calon-mahasiswa/reguler/s1',
           target: false
         },
         {
           id: 's2',
           title: 'S2',
           type: 'item',
-          url: '/dashboard/reguler/s2',
+          url: '/calon-mahasiswa/reguler/s2',
           target: false
         }
       ]
@@ -41,9 +41,25 @@ const DataMahasiswa = {
     {
       id: 'konversi',
       title: 'Jalur Konversi',
-      type: 'item',
-      url: '/dashboard/konversi',
+      type: 'collapse',
+      url: '/calon-mahasiswa/konversi',
       icon: icons.IconSchool,
+      children: [
+        {
+          id: 's1',
+          title: 'S1',
+          type: 'item',
+          url: '/calon-mahasiswa/konversi/s1',
+          target: false
+        },
+        {
+          id: 's2',
+          title: 'S2',
+          type: 'item',
+          url: '/calon-mahasiswa/konversi/s2',
+          target: false
+        }
+      ]
     },
   ]
 };

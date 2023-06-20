@@ -16,6 +16,8 @@ const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialI
 const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
 const JalurRegulerS1 = Loadable(lazy(() => import('views/jalurReguler/s1')));
 const JalurRegulerS2 = Loadable(lazy(() => import('views/jalurReguler/s2')));
+const JalurKonversiS1 = Loadable(lazy(() => import('views/jalurKonversi/s1')));
+const JalurKonversiS2 = Loadable(lazy(() => import('views/jalurKonversi/s2')));
 
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('views/sample-page')));
@@ -28,15 +30,11 @@ const MainRoutes = {
   children: [
     {
       path: '/',
-      element: <DashboardDefault />
+      element: <MainLayout />
     },
     {
-      path: 'dashboard',
+      path: 'calon-mahasiswa',
       children: [
-        {
-          path: 'default',
-          element: <DashboardDefault />
-        },
         {
           path: 'reguler',
           children: [
@@ -52,7 +50,16 @@ const MainRoutes = {
         },
         {
           path: 'konversi',
-          children: []
+          children: [
+            {
+              path: 's1',
+              element: <JalurKonversiS1 />
+            },
+            {
+              path: 's2',
+              element: <JalurKonversiS2 />
+            }
+          ]
         }
       ]
     },
